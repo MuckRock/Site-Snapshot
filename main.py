@@ -12,9 +12,9 @@ class Snapshot(SoftTimeOutAddOn):
     def main(self):
         now = datetime.now()
         for url in self.data["sites"]:
-            with open(f"{url} {now}.pdf", "wb") as f:
-                f.write(pdfkit.from_url(url))
-            self.client.documents.upload(f"{url} {now}.pdf")
+            print(url)
+            pdfkit.from_url(url, 'out.pdf')
+            self.client.documents.upload("out.pdf")
 
 if __name__ == "__main__":
     Snapshot().main()
