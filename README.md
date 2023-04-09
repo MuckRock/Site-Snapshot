@@ -5,4 +5,4 @@
 
 # Site Snapshot Add-On
 
-This Add-On will create a timestamped snapshot of a site as it is seen when running the Add-On using pdfkit to print the site as a PDF and save it to DocumentCloud. 
+This Add-On will create a timestamped snapshot of a site or set of sites as seen using pdfkit to print the site as a PDF and save it to DocumentCloud. 
