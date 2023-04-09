@@ -3,6 +3,9 @@ description: This Add-On will create a PDF snapshot of a site and upload the doc
 type: object
 documents: []
 properties:
+  project_id:
+    title: If you would like to add these snapshots to a DocumentCloud project, provide the ID here. 
+    type: integer
   sites:
     type: array
     default: [""]
