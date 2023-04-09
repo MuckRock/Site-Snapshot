@@ -5,6 +5,7 @@ documents: []
 properties:
   sites:
     type: array
+    default: [""]
     items:
       title: URL
       type: string
