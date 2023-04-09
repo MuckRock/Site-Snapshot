@@ -18,6 +18,7 @@ class Snapshot(SoftTimeOutAddOn):
             for file_name in files:
                 file_name = os.path.join(current_path, file_name)
                 basename = os.path.basename(file_name)
+                print(basename)
                 self.client.documents.upload(basename)
 
 if __name__ == "__main__":
