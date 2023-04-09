@@ -16,6 +16,7 @@ class Snapshot(SoftTimeOutAddOn):
             pdfkit.from_url(url)
         for current_path, folders, files in os.walk("."):
             for file_name in files:
+                file_name = os.path.join(current_path, file_name)
                 basename = os.path.basename(file_name)
                 self.client.documents.upload(basename)
 
