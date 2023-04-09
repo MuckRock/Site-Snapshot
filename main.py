@@ -15,7 +15,8 @@ class Snapshot(SoftTimeOutAddOn):
         os.chdir("./out/")
         now = datetime.now()
         for url in self.data["sites"]:
-            pdfkit.from_url(url, f"{url} {now}.pdf")
+            with open(f'{url} {now}.pdf", "wb") as f:
+                f.write(pdfkit.from_url(url))
             self.client.documents.upload(f"{url} {now}.pdf")
 
 if __name__ == "__main__":
