@@ -17,7 +17,7 @@ class Snapshot(SoftTimeOutAddOn):
         for current_path, folders, files in os.walk("./out/"):
             for file_name in files:
                 basename = os.path.basename(file_name)
-                self.client.documents.upload(basename)
+                print(basename)
 
 if __name__ == "__main__":
     Snapshot().main()
