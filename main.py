@@ -5,6 +5,7 @@ This DocumentCloud Add-On uses pdfkit https://pdfkit.org/ to create a PDF snapsh
 from documentcloud.addon import SoftTimeOutAddOn
 import pdfkit
 import os
+from datetime import date
 
 class Snapshot(SoftTimeOutAddOn):
     """Add-On that uses pdfkit to take a snapshot and save it to DocumentCloud"""
@@ -12,10 +13,10 @@ class Snapshot(SoftTimeOutAddOn):
     def main(self):
         os.makedirs(os.path.dirname("./out/"), exist_ok=True)
         os.chdir("./out/")
-        test=self.data.get("sites")
+        now = datetime.now()
         for url in self.data["sites"]:
-            doc = pdfkit.from_url(url)
-            self.client.documents.upload(doc)
+            pdfkit.from_url(url, f"{site} {now}.pdf")
+            self.client.documents.upload(f"{site} {now}.pdf")
 
 if __name__ == "__main__":
     Snapshot().main()
