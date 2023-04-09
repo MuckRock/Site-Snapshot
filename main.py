@@ -13,13 +13,14 @@ class Snapshot(SoftTimeOutAddOn):
         os.makedirs(os.path.dirname("./out/"), exist_ok=True)
         os.chdir("./out/")
         for url in self.data["sites"]:
-            pdfkit.from_url(url)
+            print(url)
+            """ pdfkit.from_url(url)
         for current_path, folders, files in os.walk("."):
             for file_name in files:
                 file_name = os.path.join(current_path, file_name)
                 basename = os.path.basename(file_name)
                 print(basename)
-                self.client.documents.upload(basename)
+                self.client.documents.upload(basename)"""
 
 if __name__ == "__main__":
     Snapshot().main()
