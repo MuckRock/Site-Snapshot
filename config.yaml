@@ -4,13 +4,17 @@ type: object
 documents: []
 properties:
   project_id:
-    title: If you would like to add these snapshots to a DocumentCloud project, provide the ID here. 
+    title: Project ID
     type: integer
+  access_level:
+    title: Access level (public, private, organization)
+    type: string
+    default: private
   sites:
     type: array
     default: [""]
     items:
-      title: URL
+      title: URL of site to snapshot
       type: string
       format: uri
 required: [sites]
