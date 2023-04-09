@@ -6,7 +6,7 @@ from documentcloud.addon import SoftTimeOutAddOn
 import pdfkit
 import os
 
-class Snapshot(SoftTimeoutAddOn):
+class Snapshot(SoftTimeOutAddOn):
     """Add-On that uses pdfkit to take a snapshot and save it to DocumentCloud"""
 
     def main(self):
