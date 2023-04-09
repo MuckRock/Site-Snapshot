@@ -15,7 +15,7 @@ class Snapshot(SoftTimeOutAddOn):
         test=self.data.get("sites")
         for url in self.data["sites"]:
             pdfkit.from_url(url)
-        os.listdir('.')
+        print(os.listdir('.'))
         """ for current_path, folders, files in os.walk("."):
             for file_name in files:
                 file_name = os.path.join(current_path, file_name)
