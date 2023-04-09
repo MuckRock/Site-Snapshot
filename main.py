@@ -16,9 +16,9 @@ class Snapshot(SoftTimeOutAddOn):
             pdfkit.from_url(url, f'{now}.pdf')
         
         if self.data.get("project_id"):
-            self.client.documents.upload_directory(".", project = self.data.get("project_id"))
+            self.client.documents.upload_directory(".", project = self.data.get("project_id"), access=self.data.get("access_level"))
         else: 
-            self.client.documents.upload_directory(".")
+            self.client.documents.upload_directory(".", access=self.data.get("access_level"))
 
 if __name__ == "__main__":
     Snapshot().main()
