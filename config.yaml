@@ -1,5 +1,5 @@
-title: Hello World
-description: This is an updated simple test add-on
+title: Site Snapshot
+description: This Add-On will create a PDF snapshot of a site and upload the document to your DocumentCloud account. 
 type: object
 documents: []
 properties:
