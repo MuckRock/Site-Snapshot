@@ -12,7 +12,7 @@ class Snapshot(SoftTimeOutAddOn):
     def main(self):
         os.makedirs(os.path.dirname("./out/"), exist_ok=True)
         os.chdir("./out/")
-        test=self.data["sites"]
+        test=self.data.get("sites")
         print(test)
         """ for url in self.data["sites"]:
             print(url)
