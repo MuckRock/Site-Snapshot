@@ -5,7 +5,7 @@ This DocumentCloud Add-On uses pdfkit https://pdfkit.org/ to create a PDF snapsh
 from documentcloud.addon import SoftTimeOutAddOn
 import pdfkit
 import os
-from datetime import date
+from datetime import datetime
 
 class Snapshot(SoftTimeOutAddOn):
     """Add-On that uses pdfkit to take a snapshot and save it to DocumentCloud"""
