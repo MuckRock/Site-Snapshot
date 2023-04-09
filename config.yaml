@@ -3,8 +3,8 @@ description: This Add-On will create a PDF snapshot of a site and upload the doc
 type: object
 documents: []
 properties:
-  type: array
   sites:
+    type: array
     items:
       title: URL
       type: string
