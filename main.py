@@ -12,9 +12,10 @@ class Snapshot(SoftTimeOutAddOn):
     def main(self):
         os.makedirs(os.path.dirname("./out/"), exist_ok=True)
         os.chdir("./out/")
-        for url in self.data["sites"]:
+        print(self.data["sites"])
+        """ for url in self.data["sites"]:
             print(url)
-            """ pdfkit.from_url(url)
+            pdfkit.from_url(url)
         for current_path, folders, files in os.walk("."):
             for file_name in files:
                 file_name = os.path.join(current_path, file_name)
