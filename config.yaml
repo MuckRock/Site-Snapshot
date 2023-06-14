@@ -18,3 +18,5 @@ properties:
       type: string
       format: uri
 required: [sites]
+categories:
+  - monitor
