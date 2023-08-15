@@ -21,7 +21,7 @@ class Snapshot(SoftTimeOutAddOn):
             now = datetime.now()
             file_uuid = uuid.uuid4().hex
             file_name = f"{now} {file_uuid}.pdf"
-            pdfkit.from_url(url, filename)
+            pdfkit.from_url(url, file_name)
         # If a project ID is specified in the front end, upload to that project. 
         # Else it will just upload the captures to your documents in general. 
         if self.data.get("project_id"):
